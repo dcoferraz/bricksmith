@@ -1,0 +1,65 @@
+{
+  "app": {
+    "name": "product-catalog",
+    "title": "Product Catalog",
+    "type": "node"
+  },
+  "environments": {
+    "dev": {
+      "host": "https://<dev-workspace-host>",
+      "catalog": "products_dev",
+      "schema": "catalog_app",
+      "warehouseId": "<dev-warehouse-id>",
+      "readGroup": "<product-catalog-readers-dev>",
+      "writeGroup": "<product-catalog-editors-dev>",
+      "rootPath": "/Workspace/Shared/apps"
+    },
+    "sqa": {
+      "host": "https://<sqa-workspace-host>",
+      "catalog": "products_sqa",
+      "schema": "catalog_app",
+      "warehouseId": "<sqa-warehouse-id>",
+      "readGroup": "<product-catalog-readers-sqa>",
+      "writeGroup": "<product-catalog-editors-sqa>",
+      "rootPath": "/Workspace/Shared/apps"
+    },
+    "prd": {
+      "host": "https://<prd-workspace-host>",
+      "catalog": "products_prd",
+      "schema": "catalog_app",
+      "warehouseId": "<prd-warehouse-id>",
+      "readGroup": "<product-catalog-readers>",
+      "writeGroup": "<product-catalog-editors>",
+      "rootPath": "/Workspace/Shared/apps"
+    }
+  },
+  "entities": [
+    {
+      "name": "product",
+      "label": "Products",
+      "table": "product",
+      "key": ["product_code"],
+      "fields": [
+        { "name": "product_code", "label": "Code", "type": "string", "maxLength": 20 },
+        { "name": "product_name", "label": "Name", "type": "string", "required": true, "maxLength": 120 },
+        { "name": "category", "label": "Category", "type": "string", "options": { "lookup": { "table": "category", "valueColumn": "category_code", "labelColumn": "category_name", "currentOnly": true } } },
+        { "name": "status", "label": "Status", "type": "string", "required": true, "options": { "values": ["DRAFT", "ACTIVE", "RETIRED"] } },
+        { "name": "unit_price", "label": "Unit price", "type": "number", "min": 0 },
+        { "name": "launch_date", "label": "Launch date", "type": "date" },
+        { "name": "is_featured", "label": "Featured", "type": "boolean" },
+        { "name": "notes", "label": "Notes", "type": "text", "maxLength": 2000 }
+      ]
+    },
+    {
+      "name": "category",
+      "label": "Categories",
+      "table": "category",
+      "key": ["category_code"],
+      "fields": [
+        { "name": "category_code", "label": "Code", "type": "string", "maxLength": 10 },
+        { "name": "category_name", "label": "Name", "type": "string", "required": true, "maxLength": 80 },
+        { "name": "sort_order", "label": "Sort order", "type": "integer", "min": 0 }
+      ]
+    }
+  ]
+}

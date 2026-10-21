@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-labelledby="title desc">
+  <title id="title">bricksmith</title>
+  <desc id="desc">Databricks Apps that run as the user and deploy right the first time, built for AI coding agents.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e1b2e"/>
+    </linearGradient>
+    <linearGradient id="brick" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5f46"/>
+      <stop offset="1" stop-color="#e2361c"/>
+    </linearGradient>
+    <pattern id="wall" width="96" height="48" patternUnits="userSpaceOnUse">
+      <rect x="2" y="2" width="44" height="20" rx="3" fill="#ffffff" opacity="0.035"/>
+      <rect x="50" y="2" width="44" height="20" rx="3" fill="#ffffff" opacity="0.035"/>
+      <rect x="-22" y="26" width="44" height="20" rx="3" fill="#ffffff" opacity="0.035"/>
+      <rect x="26" y="26" width="44" height="20" rx="3" fill="#ffffff" opacity="0.035"/>
+      <rect x="74" y="26" width="44" height="20" rx="3" fill="#ffffff" opacity="0.035"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="320" fill="url(#bg)"/>
+  <rect width="1280" height="320" fill="url(#wall)"/>
+
+  <!-- stacked bricks mark -->
+  <g transform="translate(88 92)">
+    <rect x="0" y="96" width="64" height="40" rx="6" fill="url(#brick)"/>
+    <rect x="72" y="96" width="64" height="40" rx="6" fill="url(#brick)"/>
+    <rect x="144" y="96" width="64" height="40" rx="6" fill="url(#brick)"/>
+    <rect x="36" y="48" width="64" height="40" rx="6" fill="url(#brick)" opacity="0.85"/>
+    <rect x="108" y="48" width="64" height="40" rx="6" fill="url(#brick)" opacity="0.85"/>
+    <rect x="72" y="0" width="64" height="40" rx="6" fill="#fbbf24"/>
+    <path d="M92 20 l10 10 l20 -20" fill="none" stroke="#1e1b2e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="360" y="150" fill="#f8fafc" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="84" font-weight="700" letter-spacing="-2">bricksmith</text>
+  <text x="364" y="198" fill="#cbd5e1" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24">Databricks Apps that run as the user and deploy right the first time.</text>
+  <text x="364" y="240" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">scaffold · check · deploy · diagnose · extend</text>
+</svg>
