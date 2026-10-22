@@ -31,7 +31,10 @@ They only stopped when a check failed on the mistake.
 
 So every trap became a rule, every rule became a check, and the checks became this skill.
 
-<!-- Story / write-up link goes here once it's published -->
+I wrote the full story, every trap and how we fixed it, as Chapter 1 of my series "Becoming a Super Engineer":
+
+- [What AI Agents Taught Me About Building Databricks Apps](https://medium.com/@dcoferraz/what-ai-agents-taught-me-about-building-databricks-apps-0efad9dc26de) on Medium
+- [Same article on dev.to](https://dev.to/dcoferraz/what-ai-agents-taught-me-about-building-databricks-apps-7ni)
 
 ## What it does
 
